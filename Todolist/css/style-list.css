@@ -1,0 +1,66 @@
+html, body{
+    cursor: crosshair;
+    height: 100%;
+}
+
+.title-holder{
+    background-image: url("../images/bright.jpeg");
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-color: rgba(12, 13, 14, 0.796);
+    color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20%;
+}
+
+/* Help from Great Stack video to center*/
+.task-list{
+    width: 100%;
+    margin: 10px auto 20px;
+    padding: 20px 30px 90px;
+
+}
+
+.task-list h2{
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    background-color: rgb(224, 191, 0);
+    padding: 1;
+}
+
+input{
+    width: 67%;
+    margin-bottom: 3%;
+    padding: 1%;
+}
+
+button{
+    float:right;
+    background-color: blanchedalmond;
+    font-size: medium;
+    border: none;
+    color: rgb(0, 0, 0);
+}
+
+button:hover{
+    float:right;
+    color:black;
+    background-color: rgb(240, 127, 47);
+    font-size: medium;
+    border: none;
+    transition: 0.5s;
+}
+
+button:active{
+    float:right;
+    color:snow;
+    background-color: rgb(10, 9, 8);
+    font-size: medium;
+    transition: 0s;
+}
