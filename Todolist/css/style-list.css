@@ -30,30 +30,34 @@ html, body{
 
 ul{
     list-style-type: none;
-    background-color: rgb(224, 191, 0);
+    background-color: rgb(0, 0, 0);
     padding: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 input{
     width: 67%;
     margin-bottom: 3%;
     padding: 1%;
+    
+    
 }
 
 button{
     float:right;
-    background-color: blanchedalmond;
+    background: transparent;
+    
     font-size: medium;
-    border: none;
-    color: rgb(0, 0, 0);
+    border-color:blanchedalmond;
+    color: rgb(2, 130, 229);
 }
 
 button:hover{
     float:right;
     color:black;
-    background-color: rgb(240, 127, 47);
+    background-color: rgb(139, 4, 176);
     font-size: medium;
-    border: none;
+    border-color: black;
     transition: 0.5s;
 }
 
@@ -64,3 +68,45 @@ button:active{
     font-size: medium;
     transition: 0s;
 }
+
+
+.item{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    align-items: center;
+    margin-bottom: 3%;
+    font-weight: bold;  
+    user-select: none;
+    position: relative;
+    
+}
+
+/* Help from Great Stack video to add button infront of items*/
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../images/notdone.png);
+    background-size: cover;
+    background-position: center;
+    left: -31px;
+    
+}
+
+/* Decided to add my own twist (visual effect) */
+ul li:hover:before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../images/notdone2.png);
+    background-size: cover;
+    background-position: center;
+    left: -31px;
+    transition: 0.3s;
+}
+
