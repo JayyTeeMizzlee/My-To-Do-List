@@ -1,11 +1,11 @@
 html, body{
     cursor: crosshair;
     height: 100%;
+    background-image: url("../images/bright.jpeg");
+    background-size: cover;
 }
 
 .title-holder{
-    background-image: url("../images/bright.jpeg");
-    background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -33,6 +33,7 @@ ul{
     background-color: rgb(0, 0, 0);
     padding: 1;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
 }
 
 input{
@@ -45,25 +46,25 @@ input{
 
 button{
     float:right;
-    background: transparent;
+    background: rgb(25, 219, 25);
     
     font-size: medium;
-    border-color:blanchedalmond;
-    color: rgb(2, 130, 229);
+    border-color:black;
+    color: rgb(0, 0, 0);
 }
 
 button:hover{
     float:right;
     color:black;
-    background-color: rgb(139, 4, 176);
+    background-color: rgb(212, 43, 17);
     font-size: medium;
-    border-color: black;
+    border-color: snow;
     transition: 0.5s;
 }
 
 button:active{
     float:right;
-    color:snow;
+    color:blanchedalmond;
     background-color: rgb(10, 9, 8);
     font-size: medium;
     transition: 0s;
@@ -78,12 +79,11 @@ button:active{
     font-weight: bold;  
     user-select: none;
     position: relative;
-    
+
 }
 
-/* Help from Great Stack video to add button infront of items*/
-
-ul li::before{
+/* Decided to add my own twist (visual effect) */
+.close-button::before {
     content: '';
     position: absolute;
     height: 28px;
@@ -93,11 +93,9 @@ ul li::before{
     background-size: cover;
     background-position: center;
     left: -31px;
-    
-}
+  }
 
-/* Decided to add my own twist (visual effect) */
-ul li:hover:before{
+  .close-button:hover:before {
     content: '';
     position: absolute;
     height: 28px;
@@ -108,5 +106,40 @@ ul li:hover:before{
     background-position: center;
     left: -31px;
     transition: 0.3s;
+  }
+
+  .completion-icon {
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../images/done2.png); 
+    background-size: cover;
+    background-position: center;
+    right: 0px;
+    
+}
+
+.completion-icon.completed{
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../images/done.png); 
+    background-size: cover;
+    background-position: center;
+    right: 0px;
+    transition: 1s;
+}
+
+.due-date{
+    margin-right: 10px;
+    background-color: black;
+    color:aqua;
+    border-color: rgb(0, 255, 255) ;
+    width: 100px;
+
 }
 
